@@ -1,67 +1,6 @@
 #include<iostream>
 #include<random>
-
 using namespace std;
-
-
-class Odometer{
-    private:
-        double miles;
-        double fuelCons;
-    public:
-        Odometer(){
-            miles = 0;
-            fuelCons = 0;
-        }
-        Odometer(double m,double f){
-            miles = m;
-            fuelCons = f;
-        }
-        void set_miles(){
-            miles = 0;
-        }
-        void set_fuelCons(double f){
-            fuelCons = f;
-        }
-        void addMiles(double m){
-            miles += m;
-        }
-        double numerOfgallons(){
-            return (miles/fuelCons);
-        }
-
-
-
-};
-class AAA{
-
-    private:
-        int sum;
-
-    public:
-
-        AAA(){
-            sum = 10;
-        }
-        AAA(int z){
-            sum = 0;
-        }
-        AAA(int z,int x){
-            sum = z + x;
-        }
-        // void initial(){
-        //     sum = 0;
-        // }
-
-        void add(int n){
-            sum += n;
-        }
-
-        void print(){
-            cout<<sum<<endl;
-        }
-};
-
 
 class Sorting{
 
@@ -81,7 +20,7 @@ class Sorting{
         }
 //insertion sorting
 //    [1,2,0]
-    //key = 2
+//    key = 2
         void insertionSort(){
             int key,j;
             for(int i = 1;i<10;i++){
@@ -96,10 +35,6 @@ class Sorting{
                 arr[j+1] = key;
             }
         }
-
-// [9,1,0,10]
-
-
         void bubbleSort(){
             bool flag;
             for(int i = 0; i < 9; i ++){
@@ -128,12 +63,12 @@ class Sorting{
 int main(){
     
     Sorting s1;
+
     s1.read();
+    cout<<"Numbers in the array before sorting \n";
     s1.print();
-    s1.insertionSort();
+    cout<<"Numbers in the array After sorting \n";
+    s1.bubbleSort();
     s1.print();
-
-    
-
     return 0;
 }
